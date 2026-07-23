@@ -284,5 +284,7 @@ I will choose the approach and implement or adapt it myself. If AI provides code
 
 ---
 
-*When every `**Answer:**` above is filled in, commit this file and start Phase 0 in the
-[build plan](./BUILD_PLAN.md). You're no longer guessing — you're building.*
+*When every `**Answer:**` above is filled in, commit this file. Next learning step: turn
+these decisions into a PRD using [PRD_GUIDE.md](./PRD_GUIDE.md) (build a Codex PRD skill,
+then produce `docs/PRD.md`). After that, start Phase 0 in the [build plan](./BUILD_PLAN.md).
+You're no longer guessing — you're building.*

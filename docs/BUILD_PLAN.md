@@ -95,6 +95,8 @@ real job instead of a class project.
 
 **You build (hands‑on):**
 - Fill out the [questionnaire](./PROJECT_QUESTIONNAIRE.md) with Codex.
+- Turn questionnaire answers into a v1 PRD using [PRD_GUIDE.md](./PRD_GUIDE.md) (learn what a
+  PRD is, build a Codex skill for it, then write `docs/PRD.md` — AI tutors, you own the decisions).
 - Install the toolchain: JDK 21, IntelliJ IDEA (Community is fine), Git.
 - Repo hygiene: `.gitignore`, the [PR template](../.github/PULL_REQUEST_TEMPLATE.md),
   branch protection on `main`.
