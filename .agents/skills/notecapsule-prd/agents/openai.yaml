@@ -1,0 +1,4 @@
+interface:
+  display_name: "NoteCapsule PRD"
+  short_description: "Guided NoteCapsule PRD learning workflow"
+  default_prompt: "Use $notecapsule-prd to guide me through creating or updating the NoteCapsule PRD one confirmed section at a time."
