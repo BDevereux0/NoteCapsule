@@ -40,14 +40,15 @@ This is a desktop Application designed that helps people capture memories about 
 
 ### Backend
 
-./mvnw spring-boot:run  (Starts the backend)
-./mvwn test (runs backend tests)
-./mvnw clean package (builds the application and packages into a JAR)
+- ./mvnw spring-boot:run  (Starts the backend)
+- ./mvwn test (runs backend tests)
+- ./mvnw clean package (builds the application and packages into a JAR)
+
 ### Frontend
 
-npm install (isntalls frontend dependencies)
-npm run dev  (starts frontend (dev) server)
-npm run build (starts frontend (build) server)
+- npm install (isntalls frontend dependencies)
+- npm run dev  (starts frontend (dev) server)
+- npm run build (starts frontend (build) server)
 
 
 ### Core
