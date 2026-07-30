@@ -4,6 +4,52 @@ This is a desktop Application designed that helps people capture memories about 
 
 ## Features
 
+## Architecture
+
+### Frontend
+- React
+- TypeScript
+- Vite
+
+### Backend
+- Java 21
+- Spring Boot
+- Maven
+
+### Database
+- MySQL
+
+### AI Services (Optional)
+- Sentence Transformers
+- Ollama / OpenAI (future)
+- RAG (future)
+
+### Development
+- Frontend runs separately from the backend
+- Frontend talks to the backend via REST APIs
+- Backend talks to MySQL
+
+## Getting Started
+
+### Requirements
+
+- Java 21
+- Node.js
+- Maven
+- MySQL
+
+### Backend
+
+./mvnw spring-boot:run  (Starts the backend)
+./mvwn test (runs backend tests)
+./mvnw clean package (builds the application and packages into a JAR)
+### Frontend
+
+npm install (isntalls frontend dependencies)
+npm run dev  (starts frontend (dev) server)
+npm run build (starts frontend (build) server)
+
+
 ### Core
 
 - Schedule a time to write the memory.
