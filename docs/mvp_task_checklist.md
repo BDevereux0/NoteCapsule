@@ -85,7 +85,7 @@ long-lived public hosting are not MVP tasks.
   - Add the Spring Boot test dependency and one context-start test.
   - **Done when:** `./mvnw test` runs locally and fails if the application cannot start.
 
-- [ ] **PR-008 — Add the frontend test runner and one smoke test.**
+- [x] **PR-008 — Add the frontend test runner and one smoke test.**
   - Configure the chosen React test runner and test the current root component.
   - **Done when:** one documented npm command runs the frontend test suite.
 
