@@ -75,13 +75,13 @@ long-lived public hosting are not MVP tasks.
 
 ## 1. Repository and build foundation
 
-- [ ] **PR-006 — Document the current architecture and developer commands.**
+- [x] **PR-006 — Document the current architecture and developer commands.**
   - Correct obsolete JavaFX, SQLite, and Gradle assumptions for the MVP implementation.
   - Document Java 21, Spring Boot/Maven, React/TypeScript/Vite, MySQL, and separate dev servers.
   - Add exact local build, test, and start commands; never include real credentials.
   - **Done when:** a new contributor can explain and start each application layer.
 
-- [ ] **PR-007 — Add a backend smoke test.**
+- [x] **PR-007 — Add a backend smoke test.**
   - Add the Spring Boot test dependency and one context-start test.
   - **Done when:** `./mvnw test` runs locally and fails if the application cannot start.
 
