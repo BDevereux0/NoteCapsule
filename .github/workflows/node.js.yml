@@ -1,0 +1,43 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Frontend CI (React/Vite/Typescript)
+
+on:
+  push:
+    paths:
+      - "frontend/**"
+  pull_request:
+    paths:
+      - "frontend/**"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x, 24.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    #Added the working-directory which tells github where to look for package.json
+    - run: npm ci
+      working-directory: frontend
+
+    #Removed the --if-present because I know the script exists and if that script breaks/disappears this will alert me
+    #ChatGPT recommended it, i'm not smart.
+    - run: npm run build
+      working-directory: frontend
+    # In package.json there is a config "test": "vitest". Which means if this were -run: npm test, github would look in package.json and have node execute that command (vitest). 
+    #Vitest defaults to open mode(?) which means it runs a test and waits. So, by adding the -- --run, I'm basically doing vitest --run which will exit after testing.
+    #The first -- is saying to pass --run as a parameter to vite.
+    - run: npm test -- --run
+      working-directory: frontend
