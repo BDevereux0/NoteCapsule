@@ -89,16 +89,16 @@ long-lived public hosting are not MVP tasks.
   - Configure the chosen React test runner and test the current root component.
   - **Done when:** one documented npm command runs the frontend test suite.
 
-- [ ] **PR-009 — Add backend CI.**
+- [x] **PR-009 — Add backend CI.**
   - Add a GitHub Actions job for the supported JDK and Maven tests.
   - Cache only safe build dependencies.
   - **Done when:** the backend check runs on pull requests.
 
-- [ ] **PR-010 — Add frontend CI.**
-  - Add install, test, type-check, and production-build steps using the lockfile.
+- [x] **PR-010 — Add frontend CI.**
+  - Add a GitHub Actions job for the frontend
   - **Done when:** frontend failures independently block the frontend CI job.
 
-- [ ] **PR-011 — Add safe local configuration templates.**
+- [x] **PR-011 — Add safe local configuration templates.**
   - Add placeholder configuration for database, Discord, and SMTP values.
   - Extend `.gitignore` for secret files and document how local values are supplied.
   - **Done when:** repository search finds no real secret and the application reports missing
@@ -176,6 +176,8 @@ long-lived public hosting are not MVP tasks.
 - [ ] **PR-026 — Show fake-delivery progress and success.**
   - Add sending and confirmed-success UI states with text, not color alone.
   - **Done when:** a browser/component test walks editor → review → approve → fake success.
+
+- [ ] **PR-Added - Add end-to-end integration CI job in github
 
 ## 3. Recipient settings and durable MVP drafts
 
