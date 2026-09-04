@@ -104,7 +104,7 @@ long-lived public hosting are not MVP tasks.
   - **Done when:** repository search finds no real secret and the application reports missing
     required configuration without printing it.
 
-- [ ] **PR-012 — Add local MySQL orchestration.**
+- [x] **PR-012 — Add local MySQL orchestration.**
   - Add the smallest Docker Compose database service and non-secret example variables.
   - Add a health check and startup instructions.
   - **Done when:** MySQL starts locally and can be stopped without deleting user data by default.

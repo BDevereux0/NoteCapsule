@@ -1,0 +1,28 @@
+services:
+  database:
+    image: mysql:8.4.6
+    restart: always
+    ports:
+      #I didn't use port 3306 because it will conflict with my local mysql instance.
+      #cat /etc/services will tell me what services are running on which port
+      - "${DB_PORTS}:3307"
+    environment:
+      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    healthcheck:
+      #Docker interprets the below as mysqladmin ping-h localhost
+      #CMD is docker syntax.
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      #Run this check every 5s
+      interval: 5s
+      #If the check takes > 3s, the attempt failed
+      timeout: 3s
+      #If 5 consecutive failures occur, the container is unhealthy
+      retries: 5
+      #Give Mysql 10s to start up before failures count
+      start_period: 10s
+
+volumes:
+  mysql_data:
