@@ -3,9 +3,14 @@ services:
     image: mysql:8.4.6
     restart: always
     ports:
-      #I didn't use port 3306 because it will conflict with my local mysql instance.
-      #cat /etc/services will tell me what services are running on which port
-      - "${DB_PORTS}:3307"
+      #Host Port : Container Port
+      #Spring sends data to the host port, which is configured to be 3307.
+      #But docker tells Linux to forward traffic from 3307 to port 3306
+      #where the docker container is listening
+      #The significance, is that this lets me direct the data stream
+      #between ports/containers. Especially important when I have multiple
+      #containers.
+      - "${DB_PORTS}:3306"
     environment:
       MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
     volumes:
@@ -24,5 +29,12 @@ services:
       #Give Mysql 10s to start up before failures count
       start_period: 10s
 
+
+#W/o volume, if I bring the container down - the data is wiped. Because
+#volumes configures docker to setup DB files so they persist after the
+#container is brought down.
 volumes:
   mysql_data:
+
+#After bringing down the container, run: sudo docker volume ls.
+#This confirms that the db files are still
