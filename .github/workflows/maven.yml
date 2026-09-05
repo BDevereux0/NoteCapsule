@@ -17,6 +17,7 @@ on:
       - 'pom.xml'
       - 'mvnw'
       - '.mvn/**'
+      - 'compose.yaml'
   pull_request:
     branches: [ "main" ]
     paths:
@@ -24,6 +25,7 @@ on:
       - 'pom.xml'
       - 'mvnw'
       - '.mvn/**'
+      - 'compose.yaml'
 
 #This lets Github write to my repo. Purpose: Enables writing dependency graph (below)
 permissions:
