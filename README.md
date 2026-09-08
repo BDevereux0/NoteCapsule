@@ -61,6 +61,62 @@ This is a desktop Application designed that helps people capture memories about 
 - Search and review previously written memories (maybe RAG)
 - Push notifications, via discord or some other medium if the memory goes undone > 30 mins.
 
+
+## Local Development
+
+### Environment Variables
+
+NoteCapsule requires environment variables to connect to the database.
+
+Create a `.env` file in the project root containing:
+
+```env
+DB_URL=<database-url>
+DB_USERNAME=<database-username>
+DB_PASSWORD=<database-password>
+```
+
+The `.env` file contains sensitive information and must **not** be committed to Git.
+
+### Maven Environment Script
+
+Use `mvn-env.sh` when running Maven commands that require the environment variables.
+
+The script loads the variables from `.env` into the process environment and then executes the supplied Maven command.
+
+Make the script executable:
+
+```bash
+chmod u+x mvn-env.sh
+```
+
+### Run Tests
+
+```bash
+./mvn-env.sh test
+```
+
+### Run the Application
+
+```bash
+./mvn-env.sh spring-boot:run
+```
+
+### Other Maven Commands
+
+Any Maven command can be passed through the script:
+
+```bash
+./mvn-env.sh <maven-command>
+```
+
+For example:
+
+```bash
+./mvn-env.sh clean test
+```
+
+
 ### Future
  
 - Docker 
