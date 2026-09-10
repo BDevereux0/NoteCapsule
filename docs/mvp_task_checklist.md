@@ -109,7 +109,7 @@ long-lived public hosting are not MVP tasks.
   - Add a health check and startup instructions.
   - **Done when:** MySQL starts locally and can be stopped without deleting user data by default.
 
-- [ ] **PR-013 — Connect Spring Boot to MySQL.**
+- [x] **PR-013 — Connect Spring Boot to MySQL.**
   - Add the JDBC/JPA dependencies and environment-backed connection configuration.
   - Add a focused application-start integration test.
   - **Done when:** the backend starts against the local database without hard-coded credentials.

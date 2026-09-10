@@ -27,6 +27,11 @@ on:
       - '.mvn/**'
       - 'compose.yaml'
 
+env:
+  DB_URL: ${{ secrets.DB_URL }}
+  DB_USERNAME: ${{ secrets.DB_USERNAME }}
+  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+
 #This lets Github write to my repo. Purpose: Enables writing dependency graph (below)
 permissions:
   contents: write
