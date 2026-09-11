@@ -114,7 +114,7 @@ long-lived public hosting are not MVP tasks.
   - Add a focused application-start integration test.
   - **Done when:** the backend starts against the local database without hard-coded credentials.
 
-- [ ] **PR-014 — Add versioned schema migrations.**
+- [x] **PR-014 — Add versioned schema migrations.**
   - Add the migration tool and an initial minimal schema/version marker.
   - Do not design later tables in this PR.
   - **Done when:** a clean database migrates on startup and the migration is repeatable.
