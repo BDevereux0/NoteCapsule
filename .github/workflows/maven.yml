@@ -28,7 +28,10 @@ on:
       - '.mvn/**'
       - 'compose.yaml'
 
-
+env:
+  DB_URL: jdbc:mysql://localhost:3306/notecapsule
+  DB_USERNAME: testuser
+  DB_PASSWORD: testpassword
 
 #This lets Github write to my repo. Purpose: Enables writing dependency graph (below)
 permissions:
